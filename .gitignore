@@ -1,2 +1,45 @@
-vendor
-node_modules
+# Laravel specific
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+
+# Laravel environment files
+.env
+.env.*.php
+
+# IDE specific files
+/.idea/
+/.vscode/
+/*.sublime-workspace
+/*.sublime-project
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# Composer files
+composer.lock
+
+# NPM files
+npm-debug.log
+yarn-error.log
+
+# Log files
+*.log
+
+# PHPUnit result cache
+.phpunit.result.cache
+
+# Other temporary files
+/.vagrant/
+/.idea/
+/*.sublime-workspace
+/*.sublime-project
+
+# JetBrains IDE files
+*.iml
+
+# Windows Installer files
+Thumbs.db
+Desktop.ini
