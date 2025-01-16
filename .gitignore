@@ -9,8 +9,8 @@
 .env.*.php
 
 # IDE specific files
-/.idea/
-/.vscode/
+.idea
+.vscode
 /*.sublime-workspace
 /*.sublime-project
 
@@ -33,7 +33,7 @@ yarn-error.log
 
 # Other temporary files
 /.vagrant/
-/.idea/
+.idea/
 /*.sublime-workspace
 /*.sublime-project
 
