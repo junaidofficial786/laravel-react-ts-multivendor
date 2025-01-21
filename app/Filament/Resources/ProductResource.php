@@ -51,7 +51,7 @@ class ProductResource extends Resource
                     Forms\Components\TextInput::make('slug')
                         ->required(),
                     Forms\Components\Select::make('department_id')
-                        ->relationship('departments', 'name')
+                        ->relationship('department', 'name')
                         ->label(__('department'))
                         ->preload()
                         ->searchable()
@@ -131,7 +131,7 @@ class ProductResource extends Resource
                 Tables\Filters\SelectFilter::make('status')
                     ->options(ProductStatusEnum::labels()),
                 Tables\Filters\SelectFilter::make('department_id')
-                    ->relationship('departments', 'name')
+                    ->relationship('department', 'name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

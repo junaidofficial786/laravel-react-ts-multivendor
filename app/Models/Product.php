@@ -38,7 +38,12 @@ class Product extends Model implements HasMedia
         return $builder->where('status', ProductStatusEnum::Published);
     }
 
-    public function departments(): BelongsTo
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function department(): BelongsTo
     {
         return $this->belongsTo(Department::class, 'department_id');
     }
