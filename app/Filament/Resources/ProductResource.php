@@ -29,6 +29,11 @@ class ProductResource extends Resource
 
     protected static SubNavigationPosition $subNavigationPosition = subNavigationPosition::End;
 
+    public static function getEloquentQuery(): Builder //show only product of authenticated vendor
+    {
+        return parent::getEloquentQuery()->forVendor();
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -99,8 +104,6 @@ class ProductResource extends Resource
                     ->options(ProductStatusEnum::labels())
                     ->default(ProductStatusEnum::Draft->value)
                     ->required()
-
-
             ]);
     }
 

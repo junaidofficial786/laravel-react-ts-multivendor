@@ -110,11 +110,11 @@ class ProductVariations extends EditRecord
     {
         $result = [[]];
 
-        foreach ($variationTypes as $index => $variationType) {
+        foreach ($variationTypes as $index => $variationType) { // select, radio
             $temp = [];
-            foreach ($variationType->options as $option) {
+            foreach ($variationType->options as $option) { //small,medium,large,black,brown,blue
                 //add the current option to all existing combinations
-                foreach ($result as $combination) {
+                foreach ($result as $combination) { //create combination of options for all variation types
                     $newCombination = $combination + [
                             'variation_type_' . ($variationType->id) => [
                                 'id' => $option->id,
